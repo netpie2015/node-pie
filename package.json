@@ -1,6 +1,6 @@
 {
   "name": "node-pie",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "A flow-based programming tool powered by Node-RED",
   "main": "index.js",
   "dependencies": {
@@ -9,12 +9,22 @@
     "node-red-contrib-netpie": "^0.9.0",
     "node-red-dashboard": "^2.4.3"
   },
-  "devDependencies": {},
+  "devDependencies": {},  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "node-pie" : "./index.js" 
+  },
   "scripts": {
     "start" : "node index.js"
+  },
+  "keywords": [
+    "netpie", "iot", "flow"
+  ],
+  "repository"   : {
+        "type":"git",
+        "url":"https://github.com/netpieio/node-pie.git"
   },
   "author": "Chavee Issariyapat <chavee@netpie.io> (https://netpie.io)",
   "license": "ISC"
