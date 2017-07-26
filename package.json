@@ -1,0 +1,21 @@
+{
+  "name": "nodepie",
+  "version": "0.9.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.15.3",
+    "node-red": "^0.17.4",
+    "node-red-contrib-netpie": "^0.9.0",
+    "node-red-dashboard": "^2.4.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "scripts": {
+    "start" : "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
