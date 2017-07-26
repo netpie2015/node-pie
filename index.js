@@ -1,6 +1,7 @@
 var http = require('http');
 var express = require("express");
 var RED = require("node-red");
+const port = 8888;
 
 var app = express();
 app.use("/",express.static("public"));
@@ -9,7 +10,6 @@ var settings = {
     httpAdminRoot:"/",
     httpNodeRoot: "/api",
     userDir:"./userdata",
-//    nodesDir:["./node_modules/node-red-contrib-netpie"],
     paletteCategories: ['netpie','subflows', 'input', 'output', 'function', 'social', 'mobile', 'storage', 'analysis', 'advanced'],
     functionGlobalContext: {},
     editorTheme : {
@@ -24,11 +24,17 @@ var settings = {
     }
 };
 
-console.log(__dirname+"/img/node-pie.png");
-
 RED.init(server,settings);
 app.use(settings.httpAdminRoot,RED.httpAdmin);
 app.use(settings.httpNodeRoot,RED.httpNode);
 
-server.listen(8888);
+server.listen(port);
 RED.start();
+
+var timer = setInterval(function() {
+    if (RED.nodes.getFlows()) {
+        RED.log.info('Node-PIE is now starting.');
+        RED.log.info('The web ui is available at http://localhost:'+port+'.');
+        clearInterval(timer);
+    }
+},1000);
