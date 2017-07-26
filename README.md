@@ -1,1 +1,2 @@
-# Node-PIE a flow-based programming tool powered by Node-RED
+# Node-PIE
+A flow-based programming tool powered by Node-RED.
