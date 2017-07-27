@@ -11,7 +11,7 @@ var server = http.createServer(app);
 var settings = {
     httpAdminRoot:"/",
     httpNodeRoot: "/api",
-    userDir:"./userdata",
+    userDir: require('os').homedir()+'/.node-pie',
     paletteCategories: ['netpie','subflows', 'input', 'output', 'function', 'social', 'mobile', 'storage', 'analysis', 'advanced'],
     functionGlobalContext: {},
     editorTheme : {
