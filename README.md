@@ -23,3 +23,6 @@ The application will be running in foreground. If you want to run as a daemon, p
 npm install pm2 -g
 pm2 start node-pie
 ```
+
+## Screen shot
+![image](https://github.com/netpieio/node-pie/blob/master/docs/images/screen.png?raw=true)
