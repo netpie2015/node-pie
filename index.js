@@ -14,7 +14,7 @@ var https_server, http_server;
 
 var n = {};
 try {
-    JSON.parse(fs.readFileSync(userdir+'/nodepie.json'));
+    n = JSON.parse(fs.readFileSync(userdir+'/nodepie.json'));
 } catch(err) {
     RED.log.info('nodepie.json not found');
 }
