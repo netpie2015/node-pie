@@ -1,0 +1,12 @@
+{
+	"port"        :  1888,
+	"secure_port" :  1889,
+    "name"        :  "sample",
+	"users"       :  [
+					   {
+		              		"username"    : "admin",
+		               		"password"    : "$2a$08$VcBgigNDSJGdkVYmFaPKY.LMIuk36z2S3NV4BkXAfizI7phNC0bsK",
+		               	    "permissions" : "*"
+	                    }
+    	             ]
+}
